@@ -1,1 +1,1 @@
-# Winter_school
+Homework for winter school

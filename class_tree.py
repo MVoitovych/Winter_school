@@ -1,47 +1,49 @@
 import datetime
 from typing import List, Union
-from unicodedata import name
+
+class FishInfo:
+
+    def __init__(self, name: str, price_in_uah_per_kilo: float, due_date: datetime,
+                origin: str, catch_date: datetime) -> None:
+        pass
 
 class Fish:
     
-    def __init__(self) -> None:
-        self.name = "oseledets"
-        self.price_in_uah_per_kilo = 11.2
-        self.catch_date = datetime("21/01/2022")
-        self.origin = "Norway"
-        self.body_only = True
-        self.weight = 100
+    def __init__(self, weight: float, age_in_months: float) -> None:
+        pass
+
+class FishBox:
+    def __init__ (self, fish_info: FishInfo, weight: float, package_date: datetime, 
+                  height: float, lenght: float, width: float, is_alive: bool) -> None:
+        pass
 
 class FishShop:
+    def __init__(self, fish_boxes: dict[str: list[FishBox]], fresh_fish: dict[str: List[Fish]] ):
+        pass
+
+    def get_fish_names_sorted_by_price(self) -> list[list]:
+        pass
+
+    def add_fish(self, fish_box: FishBox) -> None:
+        pass
+
+    def add_fish(self, fish: Fish) -> None:
+        pass
+
+    def sell_fish(self, name: str, weight: float, is_fresh: bool) -> Union[str, float, float]:
+        pass
+
+    def get_frozen_fish_names_sorted_by_price(self) -> list[ tuple([str, bool, float]) ]:
+        pass
+
+    def get_fresh_fish_names_sorted_by_price(self) -> list[ tuple([str, bool, float]) ]:
+        pass
+
+
+
     
-    def add_fish(self, fish_name: str, total_weight: float) -> None:
-        pass
 
-    def get_fish_names_sorted_by_price(self) -> List[Union[str, float]]:
-        pass
+
     
-    def sell_fish(self, fish_name: str, weight: float) -> float:
-        pass
-
-    def cast_out_old_fish(self) -> List[Union[str, float]]:
-        pass
-
-class Seller:
-
-    def sell_fish(self, fish_name: str, fish_price_in_uah_per_kilo: float, 
-                  fish_weight: float, is_fish_available_to_sell: bool) -> float:
-        pass
-    
-class Buyer:
-
-    def check_fish_list(self, fish_list: list(str) ) -> None:
-        pass
-
-    def check_fish_in_the_price_range(self, lower_price: float, higher_price: float) -> List[Union[str, float]]:
-        pass
-
-    def buy_fish(self, fish_name: str, fish_price_in_uah_per_kilo: float, 
-                 fish_weight: float, catch_date: str ) -> None:
-        pass
         
     
